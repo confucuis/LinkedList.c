@@ -19,7 +19,6 @@ ListNode *new_list_node(int num)
 // 析构函数(清理节点)
 void delete_list_node(ListNode *node)
 {
-    if (!node) {
+    if (!node) 
         free(node);
-    }
 }
