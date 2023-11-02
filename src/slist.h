@@ -3,8 +3,8 @@
 / 增删改查
 */
 
-#ifndef _SINGLY_LINKED_
-#define _SINGLY_LINKED_
+#ifndef _SLIST_H_
+#define _SLIST_H_
 
 typedef struct {
     int num;
