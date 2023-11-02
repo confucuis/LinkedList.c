@@ -7,11 +7,10 @@
 #define _SINGLY_LINKED_
 
 typedef struct {
-    int data;
-    ListNode *next;
+    int num;
+    struct ListNode *next;
 } ListNode;
 
-ListNode *new_node(int data);
-void destory_node();
-
+ListNode *new_list_node(int num);
+void delete_list_node(ListNode *node);
 #endif
