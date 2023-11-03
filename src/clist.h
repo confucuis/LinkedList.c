@@ -9,7 +9,7 @@
 #define CLIST
 
 // 节点
-typedef struct {
+typedef struct CListNode {
     int num;
     struct CListNode *prev;
     struct CListNode *next;
