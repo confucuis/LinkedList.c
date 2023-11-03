@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 # 临时使用脚本编译
+# SLIST_UP DLIST_UP CLIST_UP条件编译宏
 
 if [ "$1" = "slist" ];then
     gcc -DSLIST_UP src/main.c src/slist.c -o slist
