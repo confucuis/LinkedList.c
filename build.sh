@@ -3,17 +3,17 @@
 # 临时使用脚本编译
 
 if [ "$1" = "slist" ];then
-    gcc src/main.c src/slist.c -o slist
+    gcc -DSLIST_UP src/main.c src/slist.c -o slist
     exit $?
 fi
 
 if [ "$1" = "dlist" ];then
-    gcc src/main.c src/dlist.c -o dlist
+    gcc -DDLIST_UP src/main.c src/dlist.c -o dlist
     exit $?
 fi
 
 if [ "$1" = "clist" ];then
-    gcc src/main.c src/clist.c -o clist
+    gcc -DCLIST_UP src/main.c src/clist.c -o clist
     exit $?
 fi
 
