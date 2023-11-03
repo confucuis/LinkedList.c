@@ -3,10 +3,10 @@
 
 
 // 构造函数(新建节点)
-ListNode *new_list_node(int num)
+SListNode *new_list_node(int num)
 {
-    ListNode *node, *next;
-    node = (ListNode *)malloc(sizeof(ListNode));
+    SListNode *node, *next;
+    node = (SListNode *)malloc(sizeof(SListNode));
     if (!node) {
         return NULL;
     }
@@ -17,7 +17,7 @@ ListNode *new_list_node(int num)
 
 
 // 析构函数(清理节点)
-void delete_list_node(ListNode *node)
+void delete_list_node(SListNode *node)
 {
     if (!node) 
         free(node);

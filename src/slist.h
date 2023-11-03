@@ -6,13 +6,15 @@
 #ifndef _SLIST_H_
 #define _SLIST_H_
 
+#define SLIST
+
 // 节点
 typedef struct {
     int num;
-    struct ListNode *next;
-} ListNode;
+    struct SListNode *next;
+} SListNode;
 
-ListNode *new_list_node(int num);
-void delete_list_node(ListNode *node);
+SListNode *new_list_node(int num);
+void delete_list_node(SListNode *node);
 
 #endif
