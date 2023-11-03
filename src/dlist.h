@@ -6,11 +6,16 @@
 #ifndef _DLIST_H_
 #define _DLIST_H_
 
-// 存储整形的节点
+#define DLIST
+
+// 节点
 typedef struct {
     int num;
-    struct ListNode *prev = NULL;
-    struct ListNode *next = NULL;
-} ListNode;
+    struct DListNode *prev;
+    struct DListNode *next;
+} DListNode;
+
+DListNode *new_list_node(int num);
+void delete_list_node(DListNode *node);
 
 #endif
