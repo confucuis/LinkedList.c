@@ -26,9 +26,9 @@ int main(void)
     sn1->next = sn2;
     sn2->next = NULL;
 
-    printf("单链: %d\n", sn0->num);
-    printf("单链: %d\n", sn1->num);
-    printf("单链: %d\n", sn2->num);
+    printf("单链: %d, sn0地址: %p\n", sn0->num, &sn0);
+    printf("单链: %d, sn1地址: %p\n", sn1->num, &sn1);
+    printf("单链: %d, sn2地址: %p\n", sn2->num, &sn2);
     delete_list_node(sn0);
     delete_list_node(sn1);
     delete_list_node(sn2);
@@ -47,9 +47,9 @@ int main(void)
     dn2->prev = dn1;
     dn2->next = NULL;
 
-    printf("双链: %d\n", dn0->num);
-    printf("双链: %d\n", dn1->num);
-    printf("双链: %d\n", dn2->num);
+    printf("双链: %d, dn0地址: %p\n", dn0->num, &dn0);
+    printf("双链: %d, dn1地址: %p\n", dn1->num, &dn1);
+    printf("双链: %d, dn2地址: %p\n", dn2->num, &dn2);
 
     delete_list_node(dn0);
     delete_list_node(dn1);
@@ -69,9 +69,9 @@ int main(void)
     cn2->prev = cn1;
     cn2->next = cn0;
 
-    printf("环链: %d\n", cn0->num);
-    printf("环链: %d\n", cn1->num);
-    printf("环链: %d\n", cn2->num);
+    printf("环链: %d, cn0地址: %p\n", cn0->num, &cn0);
+    printf("环链: %d, cn1地址: %p\n", cn1->num, &cn1);
+    printf("环链: %d, cn2地址: %p\n", cn2->num, &cn2);
 
     delete_list_node(cn0);
     delete_list_node(cn1);
