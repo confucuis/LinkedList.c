@@ -9,7 +9,7 @@
 #define DLIST
 
 // 节点
-typedef struct {
+typedef struct DListNode {
     int num;
     struct DListNode *prev;
     struct DListNode *next;
