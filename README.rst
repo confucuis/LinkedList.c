@@ -1,6 +1,6 @@
-### 数据结构
+### 链表
 
-数据结构c的实现:  
+链表c的实现:  
   - 单链  
   - 双链  
   - 环链  
@@ -9,4 +9,4 @@
   - ...  
 
 测试示例:  
-  sh build.sh [slist|dlist|clist]
+  sh build.sh [slist|dlist|clist|stack]
