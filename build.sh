@@ -26,24 +26,26 @@ if [ ! -d build ];then
     mkdir build
 fi
 
+if [ ! -d bin ];then
+    mkdir bin
+fi
+
 cd build
 
 if [ "$1" = "slist" ];then
-    cmake -DSLIST=on ..
-    make
+    cmake -DSLIST=on .. && make && mv slist ../bin && rm ../build -fr
     exit $?
 fi
 
 if [ "$1" = "dlist" ];then
-    cmake -DDLIST=on ..
-    make
+    cmake -DDLIST=on .. && make && mv dlist ../bin && rm ../build -fr
     exit $?
 fi
 
 if [ "$1" = "clist" ];then
-    cmake -DCLIST=on ..
-    make
+    cmake -DCLIST=on .. && make && mv clist ../bin && rm ../build -fr
     exit $?
 fi
+
 
 echo "$0 [slist|dlist|clist]"
