@@ -20,4 +20,5 @@ void delete_list_node(DListNode *node)
 {
     if (!node)
 	free(node);
+    node = NULL;
 }
