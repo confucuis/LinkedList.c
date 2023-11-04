@@ -20,5 +20,6 @@ void delete_list_node(CListNode *node)
 {
     if (!node)
 	free(node);
+    node = NULL;
 }
 
