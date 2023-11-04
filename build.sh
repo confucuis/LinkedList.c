@@ -47,5 +47,9 @@ if [ "$1" = "clist" ];then
     exit $?
 fi
 
+if [ "$1" = "stack" ];then
+    cmake -DSTACK=on .. && make && mv stack ../bin && rm ../build -fr
+    exit $?
+fi
 
-echo "$0 [slist|dlist|clist]"
+echo "$0 [slist|dlist|clist|stack]"

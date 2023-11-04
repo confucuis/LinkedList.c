@@ -13,6 +13,10 @@
 #include "clist.h"
 #endif
 
+#ifdef STACK_UP
+#include "stack.h"
+#endif
+
 
 int main(void)
 {
@@ -91,6 +95,27 @@ int main(void)
     delete_list_node(cn0);
     delete_list_node(cn1);
     delete_list_node(cn2);
+#endif
+
+#ifdef STACK
+    // 栈
+    ListStack *stack = new_list_stack();
+    push(stack, 100);
+    push(stack, 200);
+    push(stack, 300);
+    push(stack, 400);
+    
+    if (!is_empty(stack))
+	printf("stack is empty!\n");
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+
+    delete_list_stack(stack);
 #endif
 
     return 0;

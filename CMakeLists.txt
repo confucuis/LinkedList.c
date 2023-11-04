@@ -20,4 +20,8 @@ if (CLIST)
     add_executable(clist src/main.c src/clist.c)
 endif()
 
-
+if (STACK)
+    add_definitions(-DSTACK_UP)
+    project(stack)
+    add_executable(stack src/main.c src/stack.c)
+endif()
