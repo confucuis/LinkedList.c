@@ -34,7 +34,9 @@ int size(ListStack *stack)
 // 判断栈是否为空
 bool is_empty(ListStack *stack)
 {
-    return stack->size == 0;
+    if (stack->size == 0) 
+	return true;
+    else return false;
 }
 
 
@@ -60,7 +62,8 @@ void push(ListStack *stack, int num)
 // 元素出栈操作
 int pop(ListStack *stack)
 {
-    if (!is_empty(stack)) assert(stack);
+    if (is_empty(stack)) 
+	assert(stack);
     int num = peek(stack);
     ListNode *tmp = stack->top;
     stack->top = stack->top->next;

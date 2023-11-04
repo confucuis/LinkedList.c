@@ -105,15 +105,19 @@ int main(void)
     push(stack, 300);
     push(stack, 400);
     
-    if (!is_empty(stack))
+    if (is_empty(stack))
+	printf("stack is empty!  %d\n", stack->size);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    pop(stack);
+    printf("%d\n", peek(stack));
+    if (is_empty(stack))
 	printf("stack is empty!\n");
-    printf("%d\n", peek(stack));
-    pop(stack);
-    printf("%d\n", peek(stack));
-    pop(stack);
-    printf("%d\n", peek(stack));
-    pop(stack);
-    printf("%d\n", peek(stack));
 
     delete_list_stack(stack);
 #endif
