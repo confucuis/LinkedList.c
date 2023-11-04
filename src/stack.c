@@ -20,7 +20,9 @@ ListStack *new_list_stack(void)
 // 析构函数(清理一个栈)
 void delete_list_stack(ListStack *stack)
 {
-    if (stack != NULL) free(stack);
+    if (stack != NULL) 
+	free(stack);
+    stack = NULL;
 }
 
 
@@ -68,6 +70,7 @@ int pop(ListStack *stack)
     ListNode *tmp = stack->top;
     stack->top = stack->top->next;
     free(tmp);
+    tmp = NULL;
     stack->size--;
     return num;
 }
