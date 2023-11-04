@@ -23,3 +23,4 @@ void delete_list_node(SListNode *node)
         free(node);
     node = NULL;
 }
+
