@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <assert.h>
 
 
 #ifdef SLIST_UP
@@ -17,12 +18,17 @@
 #include "stack.h"
 #endif
 
+#ifdef QUEUE_UP
+#include "queue.h"
+#endif
+
 
 int main(void)
 {
 #ifdef SLIST
     // 单链
     SListNode *sn0, *sn1, *sn2;
+
     sn0 = new_list_node(0);
     sn1 = new_list_node(1);
     sn2 = new_list_node(2);
@@ -120,6 +126,14 @@ int main(void)
 	printf("stack is empty!\n");
 
     delete_list_stack(stack);
+#endif
+
+#ifdef QUEUE
+    // 队列
+    ListQueue *queue = new_list_queue();
+    if (!queue)
+    push(queue, 1000);
+    push(queue, 2000)
 #endif
 
     return 0;
