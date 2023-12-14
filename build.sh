@@ -52,4 +52,9 @@ if [ "$1" = "stack" ];then
     exit $?
 fi
 
-echo "$0 [slist|dlist|clist|stack]"
+if [ "$1" = "map" ];then
+    cmake -DMAP=on .. && make && mv map ../bin && rm ../build -fr
+    exit $?
+fi
+
+echo "$0 [slist|dlist|clist|stack|map]"
